@@ -1,16 +1,43 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+      <div class="first-name-div">
+        <label for="first-name">First Name:&nbsp;</label>
+        <input type="text" name="First Name" id="first-name" />
+      </div>
+      <div class="last-name-div">
+        <label for="last-name">Last Name:&nbsp;</label>
+        <input type="text" name="Last Name" id="last-name" />
+      </div>
+      <div class="phone-number">
+        <label for="phone-number">Phone Number:&nbsp;</label>
+        <input type="tel" name="Phone Number" id="phone-number" />
+      </div>
+      <div class="email-id">
+        <label for="email-id">Email Id:&nbsp;</label>
+        <input type="email" name="Email Id" id="email-id" />
+      </div>
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+    <script>
+      const firstName = document.getElementById("first-name");
+      const lastName = document.getElementById("last-name");
+      const phoneNumber = document.getElementById("phone-number");
+      const emailId = document.getElementById("email-id");
+      const submitBtn = document.getElementById("submit");
 
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+      submitBtn.onclick = (e) => {
+        e.preventDefault();
+        console.log(
+          `First Name: ${firstName.value} Last Name: ${lastName.value} Phone Number: ${phoneNumber.value} Email ID: ${emailId.value}`
+        );
+      };
+    </script>
+  </body>
 </html>
